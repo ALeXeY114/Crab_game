@@ -85,7 +85,7 @@ h1{
 
 .board__game_img{
     max-width: 100%;
-    max-height: 100%;
+    max-height: 85vh;
     border-radius: 25px;
     object-fit: contain;
 }
