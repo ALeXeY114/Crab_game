@@ -53,7 +53,7 @@ function setTime(value){
 function endGame() {
     finishGame.parentNode.classList.add('hide')
     primaryPage.classList.remove('hide')
-    boardGame.innerHTML = `<div><h1>Поймали <span class="primary">${score}<img src="./img/crab.png"/></span></h1></div>`
+    boardGame.innerHTML = `<div><h1>Поймали <span class="primary">${score} <img src="./img/crab.png"/></span></h1></div>`
 }
 
 function reduceTime () {
