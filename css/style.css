@@ -1,0 +1,95 @@
+body{
+    font-family: 'Chelsea Market', cursive;
+    font-size: 25px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+a{
+    text-decoration: none;
+    color: #fefefe;
+}
+
+a:hover{
+    color: #c28c3f;
+}
+
+h1{
+    font-size: 75px;
+}
+
+.block{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+    height: 100vh;
+    background-color: #4187ec;
+    transition: margin 1s ease-in-out;
+}
+
+.block.up{
+    margin-top: -100vh;
+}
+
+.rules__game{
+    max-width: 80vh;
+}
+
+.time__game{
+    display: flex;
+}
+
+.time__game li{
+    list-style: none;
+}
+
+.btn__game{
+    border: none;
+    outline: none;
+    background-color: white;
+    color: #4187ec;
+    border-radius: 40px;
+    padding: 15px;
+    margin: 10px;
+    font-size: 20px;
+}
+
+.btn__game:hover{
+    background-color:#c28c3f;
+    color: white;
+}
+
+.hide{
+    opacity:0;
+}
+
+.primary {
+    color: #c28c3f;
+  }
+
+.board__game{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+    max-height: 700px;
+    position: relative;
+}
+
+.board__game_img{
+    max-width: 500px;
+    max-height: 700px;
+    border-radius: 25px;
+    
+}
+
+.crab{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap" rel="stylesheet">
+    <title>Crab_game</title>
+</head>
+<body>
+    <section class="block">
+        <div class="start__page">
+            <h1>Crab game</h1>
+            <a href="#" class="start__page" id="start__page">START</a>
+        </div>
+    </section>
+    <section class="block">
+        <div class="rules__game">
+            <h1>ПРАВИЛА ИГРЫ</h1>
+            <p>Наводи курсором на крабов <img style="width:25px" src="./img/crab.png"/> и нажимай левую кнопку "мышки", тем самым лови их :) Чем больше поймаешь, тем сытней тебе будет жить на острове! Удачи мой друг</p>
+            <a href="#" class="start__rules" id="start__rules">Я понял!</a>
+        </div>
+    </section>
+    <section class="block">
+        <div class="settings__game">
+            <h1>Время:</h1>
+            <ul class="time__game" id="time__game">
+                <li><button class="btn__game" data-time="15">15 сек</button></li>
+                <li><button class="btn__game" data-time="30">30 сек</button></li>
+                <li><button class="btn__game" data-time="45">45 сек</button></li>
+                <li><button class="btn__game" data-time="60">60 сек</button></li>
+            </ul>
+        </div>
+    </section>
+    <section class="block">
+        <div class="field__game">
+            <h3>Осталось <span id="finish__game"> 00:00 </span> сек</h3>
+            <div class="board__game" id="board__game"><img class="board__game_img" src="./img/img_crab_game.jpg"/></div>
+            <div class="hide" id="primary__page"><a href="#">Хочу еще крабов!</a></div>
+        </div>
+    </section>
+
+    <script src="js\app.js"></script>
+</body>
+</html>
