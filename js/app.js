@@ -75,7 +75,7 @@ function randomNumber (min, max) {
 function setPositionSize () {
     const crabImg = document.createElement('img')
     crabImg.src = '/img/crab.png'
-    const sizeCrab = randomNumber (20, 60)
+    const sizeCrab = randomNumber (35, 70)
     const {width, height} = boardGame.getBoundingClientRect()
     const x = randomNumber (0, height-sizeCrab)
     const y = randomNumber (0, width-sizeCrab)
