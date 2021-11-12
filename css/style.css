@@ -1,6 +1,7 @@
 body{
-    font-family: 'Chelsea Market', cursive;
-    font-size: 25px;
+    font-family: 'Chelsea Market', 'Montserrat', sans-serif;
+    
+    font-size: 3vh;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -17,7 +18,7 @@ a:hover{
 }
 
 h1{
-    font-size: 75px;
+    font-size: 7vh;
 }
 
 .block{
