@@ -37,10 +37,13 @@ h1{
 
 .rules__game{
     max-width: 80vh;
+    margin: 20px;
 }
 
 .time__game{
     display: flex;
+    justify-content: center;
+    padding: 0;
 }
 
 .time__game li{
