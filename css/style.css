@@ -68,7 +68,7 @@ h1{
 }
 
 .hide{
-    opacity:0;
+    display: none;
 }
 
 .primary {
@@ -96,4 +96,14 @@ h1{
     cursor: pointer;
     top: 0;
     left: 0;
+}
+
+.primary__page{
+    position: relative;
+}
+
+.copy{
+    position: absolute;
+    bottom: 5vh;
+    left: 45vh;
 }
