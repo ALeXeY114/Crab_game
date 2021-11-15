@@ -5,6 +5,7 @@ const timeGame = document.querySelector('#time__game')
 const finishGame = document.querySelector('#finish__game')
 const boardGame = document.querySelector('#board__game')
 const primaryPage = document.querySelector('#primary__page')
+const copyText = document.querySelector('#copy__text')
 
 let time = 0
 let score = 0
@@ -53,6 +54,7 @@ function setTime(value){
 function endGame() {
     finishGame.parentNode.classList.add('hide')
     primaryPage.classList.remove('hide')
+    copyText.classList.remove('hide')
     boardGame.innerHTML = `<div><h1>Поймали <span class="primary">${score} <img src="./img/crab.png"/></span></h1></div>`
 }
 

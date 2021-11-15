@@ -98,10 +98,6 @@ h1{
     left: 0;
 }
 
-.primary__page{
-    position: relative;
-}
-
 .copy{
     position: absolute;
     bottom: 5vh;
