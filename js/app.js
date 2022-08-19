@@ -101,7 +101,7 @@ function continueGame () {
     location.reload()
 }
 
-//генератор случаный фраз
+//генератор случаных фраз
 const getNewQuote = async () => {
     //api
     let url="https://type.fit/api/quotes"
