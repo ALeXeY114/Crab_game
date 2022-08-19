@@ -42,12 +42,10 @@
     <section class="block">
         <div class="field__game">
             <h3>Осталось <span id="finish__game"> 00:00 </span> сек</h3>
-            <div class="board__game" id="board__game"><img class="board__game_img" src="./img/img_crab_game.jpg" />
-            </div>
+            <div class="board__game" id="board__game"><img class="board__game_img" src="./img/img_crab_game.jpg" /></div>
             <div class="hide" id="primary__page"><a href="#">Хочу еще крабов!</a></div>
-            <div class="hide" id="copy__text"><a href="https://wed-developer-bomkoar.000webhostapp.com"
-                    class="copy">&#169 Bomko Aleksey</a></div>
-
+            <div class="quote hide" id="quote"></div>
+            <div class="hide" id="copy__text"><a href="https://wed-developer-bomkoar.000webhostapp.com" class="copy">&#169 Bomko Aleksey</a></div>
         </div>
     </section>
 
@@ -64,6 +62,27 @@
     </script>
     
     <script src="https://cdn-app.sberdevices.ru/shared-static/0.0.0/polyfills/cookie-ls-polyfill.min.js"></script>
+
+    <script>
+        const text=document.getElementById("quote");
+
+        const getNewQuote = async () => {
+            //api
+            let url="https://type.fit/api/quotes"
+            //получение данных из API
+            const response=await fetch(url);
+            console.log(typeof response);
+            //преобразовать ответ в json и сохранить его в массиве
+            const allQuotes = await response.json();
+            //генерация случайного числа
+            const indx = Math.floor(Math.random()*allQuotes.length);
+            //сохранение фразы полученной на основании индекса из массива
+            const quote=allQuotes[indx].text;
+            //вставка текста в HTML
+            text.innerHTML=quote;
+        }
+        getNewQuote()
+    </script>
 </body>
 
 </html>

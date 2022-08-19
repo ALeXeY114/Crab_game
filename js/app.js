@@ -6,6 +6,8 @@ const finishGame = document.querySelector('#finish__game')
 const boardGame = document.querySelector('#board__game')
 const primaryPage = document.querySelector('#primary__page')
 const copyText = document.querySelector('#copy__text')
+//генератор случаный фраз
+const text=document.getElementById("quote");
 
 let time = 0
 let score = 0
@@ -55,6 +57,10 @@ function endGame() {
     finishGame.parentNode.classList.add('hide')
     primaryPage.classList.remove('hide')
     copyText.classList.remove('hide')
+
+    //генератор случаный фраз
+    text.classList.remove('hide')
+
     boardGame.innerHTML = `<div><h1>Поймали <span class="primary">${score} <img src="./img/crab.png"/></span></h1></div>`
 }
 
@@ -94,3 +100,21 @@ function setPositionSize () {
 function continueGame () {
     location.reload()
 }
+
+//генератор случаный фраз
+const getNewQuote = async () => {
+    //api
+    let url="https://type.fit/api/quotes"
+    //получение данных из API
+    const response = await fetch(url);
+    console.log(typeof response);
+    //преобразовать ответ в json и сохранить его в массиве
+    const allQuotes = await response.json();
+    //генерация случайного числа
+    const index = Math.floor(Math.random()*allQuotes.length);
+    //сохранение фразы полученной на основании индекса из массива
+    const quote = allQuotes[index].text;
+    //вставка текста в HTML
+    text.innerHTML=quote;
+}
+getNewQuote()
